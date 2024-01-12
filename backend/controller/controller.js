@@ -126,8 +126,12 @@ const user_rating_post = async (req, res) => {
   try {
     const reqID = req.id.iduser;
     const user = await Mydata.findOne({ _id: reqID });
+    console.log("---------")
+    console.log(user)
     if (user) {
       user.rating = req.id.newrating;
+      console.log("************")
+      console.log(req.id.newrating)
       await user.save();
       res.status(200).send("rating confirmé.");
       return;

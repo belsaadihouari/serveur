@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const Mydata = require("../models/UserSchema");
 require("dotenv").config();
 const Mydatatoken = require("../models/tokenSchema");
- function verifiToken(req, res, next) {
+function verifiToken(req, res, next) {
   const tokenUrl = req.query.token;
   if (tokenUrl) {
     jwt.verify(tokenUrl, process.env.KEY_JWT, async (err, decoded) => {
@@ -17,10 +17,11 @@ const Mydatatoken = require("../models/tokenSchema");
             iduser: decoded.id,
           };
           next();
-          
         } else {
           // Gérer d'autres cas non prévus
-          return res.status(500).json({ error: "Erreur lors de la confirmation de l'email" });
+          return res
+            .status(500)
+            .json({ error: "Erreur lors de la confirmation de l'email" });
         }
       }
     });
@@ -30,54 +31,58 @@ const Mydatatoken = require("../models/tokenSchema");
 }
 
 const ratingcheck = (req, res, next) => {
-  
-  const token = req.cookies.jwt;
-  
+  let token;
+  const authorizationHeader =
+    req.headers["authorization"] || req.headers["Authorization"];
+  if (authorizationHeader) {
+    [, token] = authorizationHeader.split(" ");
+  }
+
   if (token) {
     jwt.verify(token, process.env.KEY_TOKEN, async (err, decoded) => {
       if (err) {
-      res.status(500).json({ error: "Internal Server Error" }); 
-      return  
+        res.status(500).json({ error: "Internal Server Error" });
+        return;
       } else {
         const currentUser = await Mydata.findById(decoded.id);
-        
         req.id = {
           iduser: decoded.id,
-          newrating:req.body.rating,
+          newrating: req.body.rating,
         };
-        next()
+        next();
       }
     });
   } else {
-   return res.status(500).json({ error: "Internal Server Error" });
-   
+    return res.status(500).json({ error: "Internal Server Error" });
   }
 };
 const pingro = (req, res, next) => {
-  res.status(200).json({success:"true"})
- }
+  res.status(200).json({ success: "true" });
+};
 
 const checkIfUser = (req, res, next) => {
   // const token = req.cookies.jwt;
   let token;
-  const authorizationHeader = req.headers['authorization'] || req.headers['Authorization'];
+  const authorizationHeader =
+    req.headers["authorization"] || req.headers["Authorization"];
+
   if (authorizationHeader) {
-     [, token] = authorizationHeader.split(' ');
+    [, token] = authorizationHeader.split(" ");
   }
+
   if (token) {
     jwt.verify(token, process.env.KEY_TOKEN, async (err, decoded) => {
       if (err) {
-      res.status(500).json({ error: "Internal Server Error" }); 
-      return  
+        res.status(500).json({ error: "Internal Server Error" });
+        return;
       } else {
         const currentUser = await Mydata.findById(decoded.id);
         res.json({ user: currentUser });
-        return
+        return;
       }
     });
   } else {
-   return res.status(500).json({ error: "Internal Server Error" });
-   
+    return res.status(500).json({ error: "Internal Server Error" });
   }
 };
-module.exports = { verifiToken, checkIfUser,ratingcheck,pingro };
+module.exports = { verifiToken, checkIfUser, ratingcheck, pingro };
