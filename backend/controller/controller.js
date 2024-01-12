@@ -37,11 +37,7 @@ const user_signup_post = async (req, res) => {
     const datatoken = new Mydatatoken({ stocktoken: token, iduser: data._id });
     await datatoken.save();
 
-    const confirmationLink = `${
-      process.env.production
-        ? process.env.BASE_URLFRONTPRODU
-        : process.env.BASE_URLFRONTLOCAL
-    }confirmation?token=${token}`;
+    const confirmationLink = `${process.env.BASE_URLFRONTPRODU}confirmation?token=${token}`;
     nodemailer(data.email, confirmationLink);
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
@@ -108,7 +104,6 @@ const user_signout_get = async (req, res) => {
     res.cookie("jwt", "", { expires: new Date(0) }); // Définir la date d'expiration sur une date passée
     res.status(200).json({ message: "Déconnexion réussie" });
   } catch (error) {
-    
     res.status(500).json({ message: "Erreur lors de la déconnexion" });
   }
 };
@@ -126,7 +121,7 @@ const user_rating_post = async (req, res) => {
   try {
     const reqID = req.id.iduser;
     const user = await Mydata.findOne({ _id: reqID });
-  
+
     if (user) {
       user.rating = req.id.newrating;
       await user.save();
