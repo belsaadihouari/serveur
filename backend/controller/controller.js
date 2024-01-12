@@ -108,7 +108,7 @@ const user_signout_get = async (req, res) => {
     res.cookie("jwt", "", { expires: new Date(0) }); // Définir la date d'expiration sur une date passée
     res.status(200).json({ message: "Déconnexion réussie" });
   } catch (error) {
-    console.log(error);
+    
     res.status(500).json({ message: "Erreur lors de la déconnexion" });
   }
 };
@@ -126,12 +126,9 @@ const user_rating_post = async (req, res) => {
   try {
     const reqID = req.id.iduser;
     const user = await Mydata.findOne({ _id: reqID });
-    console.log("---------")
-    console.log(user)
+  
     if (user) {
       user.rating = req.id.newrating;
-      console.log("************")
-      console.log(req.id.newrating)
       await user.save();
       res.status(200).send("rating confirmé.");
       return;

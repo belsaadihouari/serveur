@@ -44,7 +44,7 @@ const ratingcheck = (req, res, next) => {
         res.status(500).json({ error: "Internal Server Error" });
         return;
       } else {
-        const currentUser = await Mydata.findById(decoded.id);
+        // const currentUser = await Mydata.findById(decoded.id);
         req.id = {
           iduser: decoded.id,
           newrating: req.body.rating,
