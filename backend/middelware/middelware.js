@@ -58,7 +58,12 @@ const pingro = (req, res, next) => {
  }
 
 const checkIfUser = (req, res, next) => {
-  const token = req.cookies.jwt;
+  // const token = req.cookies.jwt;
+  let token;
+  const authorizationHeader = req.headers['authorization'] || req.headers['Authorization'];
+  if (authorizationHeader) {
+     [, token] = authorizationHeader.split(' ');
+  }
   if (token) {
     jwt.verify(token, process.env.KEY_TOKEN, async (err, decoded) => {
       if (err) {
