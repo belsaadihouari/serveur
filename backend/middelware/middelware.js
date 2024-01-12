@@ -82,7 +82,7 @@ const checkIfUser = (req, res, next) => {
       }
     });
   } else {
-    return res.status(500).json({ error: "Internal Server Error" });
+    return res.json({ error: "Error" });
   }
 };
 module.exports = { verifiToken, checkIfUser, ratingcheck, pingro };
