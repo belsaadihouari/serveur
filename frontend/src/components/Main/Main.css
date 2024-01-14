@@ -1,0 +1,62 @@
+.main1 {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+main .left-section {
+  flex-direction: column;
+  gap: 40px;
+  width: 65%;
+  margin-top: 50px;
+  flex: 2;
+  position: sticky;
+  top: 2rem;
+}
+main .right-section {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 20px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 5;
+  position: relative;
+}
+.loaderconfi {
+  position: absolute;
+}
+
+@media (max-width: 1460px) {
+  .main1 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+  }
+  .main1 .right-section {
+    justify-content: center;
+  }
+  button.btn {
+    width: 11rem;
+    height: 1rem;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .left-section {
+    flex-direction: row;
+    top: 0rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 10px;
+    margin-bottom: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

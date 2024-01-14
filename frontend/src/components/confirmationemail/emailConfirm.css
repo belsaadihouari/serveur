@@ -1,0 +1,182 @@
+
+.loaderconfi{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.imgemail{
+  max-width: 300px;
+  max-height: 300px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.h1img{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--subtitle);
+}
+.h1img2{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--subtitle);
+}
+
+.aconfirm {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: var(--h1);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 1.5s;
+   
+  }
+  .aconfirm:hover {
+  border-radius: 10px;
+    background-color: var(--bluet);
+    color: black;
+   
+  }
+  .aconfirm span {
+    position: absolute;
+    display: block;
+    
+  }
+  .loadingemail{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .aconfirm span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--bluet));
+    animation: btn-anim1 1.5s linear infinite;
+   
+  }
+
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+  
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .aconfirm span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--bluet));
+    animation: btn-anim2 1.5s linear infinite;
+    animation-delay: 0.375s;
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+  
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  
+  .aconfirm span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--bluet));
+    animation: btn-anim3 1.5s linear infinite;
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+  
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+  
+  .aconfirm span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--bluet));
+    animation: btn-anim4 1.5s linear infinite;
+    animation-delay: 1.125s;
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+  
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+
+
+  @media (min-width: 340px) and (max-width: 565px) {
+    .h1confirmemail{
+     font-size: 20px;
+  }
+  .imgemail{
+    max-width: 150px;
+    max-height: 150px;
+   
+  }
+  }
+  @media (max-width: 339px) {
+    .h1confirmemail{
+     font-size: 15px;
+  }
+  .aconfirm {
+    font-size: 12px;
+  }
+  .imgemail{
+    max-width: 150px;
+    max-height: 150px;
+   
+  }
+  }
+  
+  
+  

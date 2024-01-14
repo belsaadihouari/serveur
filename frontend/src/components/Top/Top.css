@@ -1,0 +1,315 @@
+.section {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75vh;
+  padding-top: 20px;
+  overflow: hidden;
+}
+.containerbtncvmobile{
+  display: none;
+}
+.rating{
+color: rgb(249, 174, 0);
+}
+.disabledrating{
+  color: rgb(119, 71, 28);
+  }
+.section h1 {
+  font-size: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  user-select: none;
+  animation: mytitle 0.3s 1 step-end;
+  transition: 0.3s;
+  color: var(--h1);
+}
+.section .icon-verified {
+  color: rgb(49, 49, 234);
+  font-size: 22px;
+  user-select: none;
+}
+
+section .containertop {
+  width: 100%;
+}
+
+.section .paragraphe {
+  color: var(--subtitle);
+  user-select: none;
+  text-align: justify;
+}
+
+section .imge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid var(--ess);
+  box-shadow: 1px 1px 20px var(--ess);
+  padding: 8px;
+  margin-top: 5px;
+  margin-left: 22px;
+}
+
+.containeranni {
+  width: 100%;
+  height: 70vh;
+  
+}
+
+.reseaux {
+  gap: 10px;
+  position: absolute;
+  margin-top:25px;
+  bottom: 2rem;
+  left: 0;
+  height: fit-content;
+}
+.reseaux .reseaus {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--h1);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.reseaux .reseaus:hover {
+  color: var(--blue);
+  font-size: 2.2rem;
+  user-select: none;
+}
+.fullstack {
+  color: var(--blue);
+}
+.animation img {
+  width: 500px;
+  height: 500px;
+  margin-left: 3rem;
+}
+
+/* @media (max-width: 700px) {
+  .section h1 {
+    font-size: 25px;
+    margin-bottom: 1px;
+  }
+
+  .section {
+    width: 98%;
+    height: 88vh;
+  }
+  section .containertop {
+    width: 100%;
+  }
+
+  .reseaux {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    gap: 15px;
+  }
+  .reseaux .reseaus {
+    font-size: 2rem;
+  }
+} */
+
+.btncv:hover{
+background-color: var(--blue) !important;
+color: black !important;
+transition: 0.8s !important;
+}
+
+.btncv:disabled{
+  background-color: gray !important;
+  color: black !important;
+  }
+  @media (min-width: 700px) and (max-width: 757px) {
+    .section h1 {
+      font-size: 18px;
+      margin-bottom: 1px;
+      
+    }
+  
+    .section {
+      width: 98%;
+      height: 85vh;
+    }
+    section .containertop {
+      width: 100%;
+      
+      
+    }
+    .reseaux {
+      position: absolute;
+  
+      gap: 10px;
+      bottom: 1rem;
+      margin-top: 3rem;
+    }
+    .animation img {
+      width: 300px;
+      height: 300px;
+     margin-top: 3rem;
+    }
+  }
+
+@media (min-width: 758px) and (max-width: 1000px) {
+  .section h1 {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+
+  .section {
+    width: 98%;
+  }
+  section .containertop {
+    width: 100%;
+  }
+  .reseaux {
+    position: absolute;
+
+    gap: 30px;
+    bottom: 1rem;
+  }
+  .animation img {
+    width: 300px;
+    height: 300px;
+   margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .section h1 {
+    font-size: 20px;
+    margin-bottom: 1px;
+  }
+
+  .section {
+    width: 98%;
+  }
+  section .containertop {
+    width: 100%;
+  }
+  .reseaux {
+    position: absolute;
+
+    gap: 30px;
+    bottom: 1rem;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+  .containeranni {
+    flex-direction: column;
+    text-align: center;
+    height: 45vh;
+    margin-top: 0;
+  }
+  .section h1 {
+    font-size: 13px;
+    margin-bottom: 1px;
+  }
+  .section .paragraphe {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    width: 98%;
+    flex-direction: column;
+    height: 85vh;
+  }
+  section .containertop {
+    width: 100%;
+  }
+  .reseaux {
+    gap: 10px;
+    /* width: 80%; */
+    /* position: absolute; */
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   bottom: 1rem;
+   margin-bottom: 2rem !important;
+  }
+  .reseaux .reseaus {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  section .imge {
+    width: 80px;
+    height: 80px;
+
+    padding: 4px;
+  }
+  .fullstack {
+    font-size: 15px;
+  }
+  .animation img {
+    width: 280px;
+    height: 200px;
+    margin-left: unset;
+    
+  }
+.btncv{
+  font-size: 10px !important;
+  width: 11rem;
+  height: 3rem;
+  
+}
+.containerbtncvpc{
+  display: none;
+}
+.containerbtncvmobile{
+  display: block;
+  margin-top: 2rem !important;
+  text-align: center;
+  
+}
+}
+
+@keyframes mytitle {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  20% {
+    opacity: 0.2;
+    scale: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+    scale: 0.4;
+  }
+
+  60% {
+    opacity: 0.6;
+    scale: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes myhello {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

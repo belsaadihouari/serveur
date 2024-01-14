@@ -1,0 +1,159 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 260px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid var(--border);
+  background-color: var(--ess);
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 1rem;
+  user-select: none;
+  text-align: center;
+  animation: parax linear forwards;
+  animation-timeline: view();
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: #e8e8e8;
+
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card .content img {
+  width: 160px;
+  height: 80px;
+  border-radius: 10px;
+
+  top: 18%;
+  position: absolute;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content .para {
+  line-height: 1.1;
+  margin-top: 105px;
+  color: var(--h1);
+}
+
+/* .content .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0px;
+} */
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--blue);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: none;
+  scale: 1.09;
+  z-index: 55;
+}
+.card:hover p {
+  color: #212121;
+}
+/* .card:hover .content .btn {
+  color: #212121;
+} */
+
+/* .card:hover .btn {
+  color: #212121;
+} */
+
+/* .content .btn:hover {
+  background: transparent;
+} */
+
+/* .content .btn:active {
+  box-shadow: none;
+} */
+.card:hover .icon-github,
+.card:hover .icon-link {
+  color: #212121;
+}
+.card .icon-github:hover,
+.card .icon-link:hover {
+  font-size: 1.2rem;
+  color: var(--ess);
+  transition: 0.2s;
+}
+.lien {
+  width: 50%;
+  height: 30px;
+
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center !important;
+}
+
+.icon-github,
+.icon-link {
+  color: var(--h1);
+  font-size: 22px;
+  cursor: pointer;
+}
+.activ {
+  color: #5dbb5d;
+}
+@keyframes parax {
+  from {
+    opacity:  0.5;
+  }
+  to {
+    opacity:  1;
+  }
+}
+
+@media (max-width: 1460px) {
+  .card {
+    width: 130px;
+    height: 220px;
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid rgb(116, 9, 9);
+  }
+  .card .content img {
+    width: 120px;
+  }
+  .content .para {
+    font-size: 13px;
+  }
+}

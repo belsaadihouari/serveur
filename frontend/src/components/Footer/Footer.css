@@ -1,0 +1,82 @@
+.foot nav.nav1 ul.flex {
+    gap: 16px;
+  }
+  .foot nav.nav1 ul li a {
+    color: var(--subtitle);
+    position: relative;
+    font-size: 0.9rem;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  
+  .foot nav.nav1 ul li a.logina:hover {
+    color: var(--blue);
+    
+  }
+
+  
+  .foot nav.nav1 li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--blue);
+    width: 100%;
+    height: 1px;
+    bottom: 1px;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0%);
+    transition: 0.2s ease-out;
+  }
+  .foot nav.nav1 li a:hover::before {
+    transform: scaleX(100%);
+  }
+  .foot nav.nav1 li a:hover {
+    color: var(--blue);
+    font-size: 0.95rem;
+  }
+  .foot ul{
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    place-content: center;
+  }
+  .foot a{
+    letter-spacing: 2px !important;
+
+  }
+  .foot p{
+    color: var(--subtitle);
+   word-spacing: 5px;
+   letter-spacing: 2px;
+   text-align-last: center;
+   margin-bottom: 1rem;
+   text-transform: capitalize;
+  }
+  .foot a.disabled {
+    pointer-events: none;
+    color: black !important;
+    cursor: not-allowed !important;
+  }
+
+  @media (max-width: 700px) {
+    .foot nav.nav1 ul li a {
+     
+      font-size: 0.6rem;
+      transition: 0.5s;
+      letter-spacing: 0.5px;
+      
+    }
+    .foot a{
+      letter-spacing: 0.5px !important;
+    }
+    .foot p{
+      
+     word-spacing: 1px;
+     letter-spacing: 0.5px;
+     font-size: 0.7rem;
+     margin-bottom: 1rem;
+    }
+    
+  }

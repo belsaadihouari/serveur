@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --primary: rgb(24, 24, 27);
+  --secondary: rgb(0, 0, 0);
+  --border: rgba(63, 63, 70, 0.4);
+  --title: rgb(244, 244, 245);
+  --subtitle: rgb(161, 161, 170);
+  --blue: rgb(1, 255, 255);
+  --bluet: rgb(234, 231, 48);
+  --nav: rgb(37, 37, 41);
+  --ess: rgb(51, 19, 58);
+  --ess22: rgb(70, 22, 80);
+  --ess2: rgb(39, 7, 45);
+  --h1:white;
+  --sign:wheat;
+  --ulmodal:rgba(0, 0, 0, 0);
+  --up: rgb(70, 22, 80);
+  --card: rgb(51, 19, 58);
+  --h1card:white;
+  --html: rgb(51, 19, 58);
+  --scroll:#9e4673;
+  --disabled:black;
+ 
+}
+.light{
+  --primary: rgb(250, 250, 250);
+  --secondary: rgb(255, 255, 255);
+  --border: rgba(202, 202, 202, 0.518);
+  --title: rgb(39 39 42);
+  --subtitle: rgb(82 82 91);
+  --blue: rgb(102, 220, 102);
+  --bluet: rgb(70, 234, 48);
+  --nav: rgb(37, 37, 41);
+  --ess: rgb(255, 255, 255);
+  --ess22: rgb(70, 22, 80);
+  --ess2:  rgb(255, 255, 255);
+  --ess23: rgb(118, 115, 116);
+  --h1:black;
+  --sign:rgb(227, 75, 75);
+  --ulmodal:rgba(0, 0, 0, 0.648);
+  --up: rgb(93, 90, 90);
+  --card: rgb(51, 19, 58);
+  --h1card:white;
+  --html: rgb(182, 178, 179);
+  --scroll:rgb(182, 178, 179);
+  --disabled:rgb(159, 156, 156);
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+ 
+}
+
+body {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--html);
+  overflow-x: hidden;
+}
+
+
+.container {
+  width: 98%;
+  background-color: var(--ess2);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--border);
+}
+.flex {
+  display: flex;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcc {
+  justify-content: center;
+}
+.grap {
+  gap: 15px;
+}
+.grapp {
+  gap: 40px;
+}
+.aic {
+  align-items: center;
+}
+.divider {
+  border-bottom: 1px solid var(--border);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+.border {
+  border: 2px solid red;
+}
+
+::-webkit-scrollbar {
+  width: 1.1rem;
+}
+
+::-webkit-scrollbar-track {
+  border: 7px solid #232943;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--scroll), #3d4a59);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(270deg, var(--scroll), #3d4a59, var(--scroll));
+}
+
+/* for Firefox */
+html {
+  scrollbar-color: var(--scroll) #3d4a59;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 700px) {
+  .divider {
+    margin-top: 0.3rem;
+    margin-bottom: 0.35rem;
+  }
+}

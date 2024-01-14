@@ -1,0 +1,287 @@
+.login-box2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  padding: 20px 40px;
+  margin: 20px auto;
+  transform: translate(-50%, -55%);
+  background: var(--ess2);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box2 p:first-child {
+  margin: 0 0 60px 0;
+  padding: 0;
+  color: var(--h1);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  
+}
+
+.login-box2 .user-box {
+  position: relative;
+}
+
+.login-box2 .user-box input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  color: var(--h1);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid var(--h1);
+  outline: none;
+  background: transparent;
+}
+
+.login-box2 .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-size: 16px;
+  color: var(--h1);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box2 .user-box input:focus ~ label,
+.login-box2 .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--h1);
+  font-size: 12px;
+}
+
+.login-box2 form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: var(--h1);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 3px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.login-box2 a span {
+  position: absolute;
+  display: block;
+}
+.divloader{
+  padding: 10px 40px;
+}
+
+.login-box2 a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--blue));
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box2 a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--blue));
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: 0.375s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box2 a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--blue));
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box2 a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--blue));
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.login-box2 p:last-child {
+  color: var(--h1);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.a2 {
+  color: var(--sign);
+  text-decoration: none;
+}
+
+.a2:hover {
+  background: transparent;
+  color: var(--blue);
+  border-radius: 5px;
+}
+
+.login-box2 .user-box .borderRed {
+  border-bottom: 1px solid red;
+}
+.login-box2 .user-box .borderGren {
+  border-bottom: 1px solid var(--blue);
+}
+.login-box2 form a.true {
+  background: var(--blue);
+  color: #080808;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px var(--blue), -1px -1px 3px var(--blue);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.login-box2 form a.true:active {
+  box-shadow: 5px 5px 30px var(--blue), -5px -5px 30px var(--blue);
+}
+
+
+
+
+
+
+
+
+
+.login-box2 .title::before,.title::after {
+  position: absolute;
+  content: "";
+
+  border-radius: 50%;
+  left: 40px;
+  top: 28px;
+  background-color: var(--blue);
+}
+
+.login-box2 .title::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--blue);
+}
+
+.login-box2 .title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+
+
+@media (max-width: 450px) {
+  .login-box2 {
+    width: 280px;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  .login-box2 p:first-child {
+    font-size: 1rem;
+  }
+  .login-box2 .user-box input {
+    font-size: 12px;
+  }
+  .login-box2 .user-box label {
+    font-size: 14px;
+  }
+  .login-box2 form a {
+    font-size: 14px;
+  }
+  .login-box2 p:last-child {
+    font-size: 12px;
+  }
+
+  .login-box2 .title::before,
+  .login-box2 .title::after {
+    left: 40px;
+    top: 13px;
+  }
+
+  .login-box2 .title::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .login-box2 .title::after {
+    width: 14px;
+    height: 14px;
+  }
+}
+
