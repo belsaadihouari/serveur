@@ -4,7 +4,7 @@ const controller = require("../controller/controller");
 const { check } = require("express-validator");
 const { verifiToken,checkIfUser,ratingcheck,pingro} = require("../middelware/middelware");
 
-
+router.get("/vuejs/agadir",controller.vuejs_agadir_get);
 router.get("/ping", pingro);
 router.get("/check", checkIfUser);
 router.post(
