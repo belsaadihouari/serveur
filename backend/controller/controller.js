@@ -155,6 +155,21 @@ const user_contact_post = async (req, res) => {
   }
 };
 
+const vuejs_agadir_get = async (req, res) => {
+  try {
+    const filleDeAgadir = {
+      delapart: "houari",
+      fille: "inconnue",
+      age: "non defini",
+      ville: "Agadir",
+      payes: "Maroc",
+    };
+    res.status(200).json(filleDeAgadir);
+  } catch (error) {
+    res.status(500).json({ error: "internal server error" });
+  }
+};
+
 module.exports = {
   user_signup_post,
   user_confirmemail_get,
@@ -163,4 +178,5 @@ module.exports = {
   user_data_get,
   user_rating_post,
   user_contact_post,
+  vuejs_agadir_get,
 };
