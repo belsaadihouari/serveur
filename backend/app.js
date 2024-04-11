@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use(express.json({ limit: "10kb" }));
 const cors = require("cors");
 const corsOptions = {
-  origin: ["https://www.houaribelsaadi.dev","https://houaribelsaadi.dev","http://localhost:5173","https://facebook.com", "*"],
+  origin: ["https://www.houaribelsaadi.dev","https://houaribelsaadi.dev","http://localhost:5173","https://facebook.com", "*","http://localhost:8000"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
